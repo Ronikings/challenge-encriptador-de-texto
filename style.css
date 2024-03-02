@@ -1,0 +1,214 @@
+body{
+    font-family: 'Inter', sans-serif;
+    background-color: #e9ecf8;
+}
+
+.logo {
+    width: 2.5rem;
+    height: auto;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 65% 30%;
+    /*grid-template-rows: auto auto;*/
+    grid-template-areas: 
+    "campo_entrada campo_salida"
+    "botones1 botones2";
+
+    margin-top: 30px;
+    margin-bottom: 20px;
+    column-gap: 3px;
+    justify-content: center;
+
+}
+
+.item1{
+    grid-area: campo_entrada;
+    text-align: center;
+}
+
+.item2{
+    grid-area: campo_salida;
+    text-align: center;
+    border-radius: 1rem 1rem 0 0;
+    background: #FFFFFF;
+}
+
+.item3{
+    grid-area: botones1;
+    text-align: center;
+}
+
+.item4{
+    grid-area: botones2;
+    text-align: center;
+    background: #FFFFFF;
+    border-radius: 0 0 1rem 1rem;
+}
+
+.alura {
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+textarea#textbox { 
+    font-weight: 400;
+    font-size: 2rem;
+    resize: none;
+    color: #0A3871;
+    width: 90%;
+    border: none;
+    background: transparent;
+}
+
+textarea#textbox::placeholder {
+    color: #0A3871;
+}
+
+textarea#textbox:focus {
+    outline: none;
+}
+
+.parrafo_advertencia {
+    text-align: left;
+    margin-top: 0.1rem;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    color: #495057;
+    font-size: 0.8rem;
+}
+
+ textarea#mensajeSalida {
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.5rem;
+    resize: none;
+    color: #495057;
+    border: none;
+    background: transparent;
+    display: none;
+    width: 80%;
+    height: 60%;
+    margin-top: 20%;
+    margin-left: auto;
+    margin-right: auto;
+} 
+
+textarea#mensajeSalida:focus {
+    outline: none;
+}
+
+box_imagen {
+    width: auto;
+}
+
+.box_imagen img {
+    width: 65%;
+    height: auto;
+    margin-top: 5%;
+    margin-bottom: 3%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+#mensaje_no_texto {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2rem;    
+}
+
+#mensaje_ingresar_texto {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.boton_encriptar, .boton_desencriptar, .boton_copiar {
+    width: 48%;
+    padding: 1.5rem;
+    border: 1px solid #0A3871;
+    border-radius: 1.5rem;
+    text-align: center;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.boton_encriptar {
+    color: #FFFFFF;
+    background: #0A3871;
+}
+
+.boton_encriptar:hover {
+    background: #072B61;
+}
+
+.boton_desencriptar{
+
+    color: #0A3871;
+    background: transparent;
+}
+
+.boton_desencriptar:hover {
+    background: white;
+}
+
+.boton_copiar {
+    display: none;
+    color: #0A3871;
+    background: transparent;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+}
+
+.boton_copiar:hover {
+    background: #e9ecf8;
+}
+
+
+footer{
+    text-align: center;
+    background: transparent;
+    padding: 15px;
+}
+
+.copyright{
+    color: black;
+    font-size: 15px;
+    margin: 5px;
+}
+
+@media screen and (max-width: 480px){
+
+    .container {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-areas: 
+        "campo_entrada"
+        "botones1"
+        "campo_salida"
+        "botones2"; 
+        margin-top: 20px;
+        margin-bottom: 10px;
+        justify-content: center;
+    }
+
+    .item2{
+        margin-top: 1rem;
+    }
+
+    textarea#mensajeSalida {
+        margin-top: 10%;
+    } 
+
+    .box_imagen img {
+        width: 60%;
+    }
+
+}
+    
+
