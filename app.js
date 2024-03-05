@@ -106,7 +106,7 @@ function sinTextoDeEntrada(){
 
 /* Función que bloquea teclas de Mayúsculas y caracteres especiales */
 textbox.addEventListener("keypress", (event) => {                      
-    if (!/[\sa-z0-9ñ.,]/.test(String.fromCharCode(event.charCode)) &&
+    if (!/[\sa-zñ.,]/.test(String.fromCharCode(event.charCode)) &&
     !event.ctrlKey && !event.SpaceKey) {
         event.preventDefault();
     }
